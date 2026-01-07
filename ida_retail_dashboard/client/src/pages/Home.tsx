@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Card } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from '@/components/ui/button';
 import { Download, TrendingUp, Users, ShoppingCart, MapPin } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter } from 'recharts';
@@ -74,7 +75,7 @@ INSIGHTS:
 3. Payment Mode Distribution: Credit cards dominate at 45% of transactions
 4. Geographic Distribution: California and Texas are top performers
     `;
-    
+
     const element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(report));
     element.setAttribute('download', 'retail-analysis-report.txt');
@@ -94,18 +95,29 @@ INSIGHTS:
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Retail Data Analysis Dashboard
             </h1>
+            <div className="flex items-center gap-4 mb-8 p-4 bg-secondary/50 rounded-lg backdrop-blur-sm border border-border w-fit">
+              <Avatar className="h-16 w-16 border-2 border-accent">
+                <AvatarImage src="https://github.com/mr-haseen-ullah.png" alt="Haseen ullah" />
+                <AvatarFallback>HU</AvatarFallback>
+              </Avatar>
+              <div>
+                <h2 className="text-xl font-bold text-foreground">Haseen ullah</h2>
+                <p className="text-sm text-muted-foreground">Reg. No: 22MDSWE238</p>
+              </div>
+            </div>
+
             <p className="text-lg text-muted-foreground mb-8">
               Comprehensive insights into sales performance, customer behavior, and market trends. Explore data intuitively, understand trends better, and easily save or share your findings.
             </p>
             <div className="flex gap-4">
-              <Button 
+              <Button
                 onClick={handleExport}
                 className="bg-accent hover:bg-accent/90 text-accent-foreground gap-2"
               >
                 <Download className="w-4 h-4" />
                 Export Report
               </Button>
-              <Button 
+              <Button
                 variant="outline"
                 className="border-border text-foreground hover:bg-secondary"
               >
@@ -176,23 +188,23 @@ INSIGHTS:
                   <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                   <XAxis dataKey="month" stroke="#64748b" />
                   <YAxis stroke="#64748b" />
-                  <Tooltip 
+                  <Tooltip
                     contentStyle={{ backgroundColor: '#fff', border: '1px solid #e2e8f0' }}
                     formatter={(value) => `$${value.toLocaleString()}`}
                   />
                   <Legend />
-                  <Line 
-                    type="monotone" 
-                    dataKey="revenue" 
-                    stroke="#0891b2" 
+                  <Line
+                    type="monotone"
+                    dataKey="revenue"
+                    stroke="#0891b2"
                     strokeWidth={2}
                     dot={{ fill: '#0891b2', r: 4 }}
                     activeDot={{ r: 6 }}
                   />
-                  <Line 
-                    type="monotone" 
-                    dataKey="profit" 
-                    stroke="#06b6d4" 
+                  <Line
+                    type="monotone"
+                    dataKey="profit"
+                    stroke="#06b6d4"
                     strokeWidth={2}
                     dot={{ fill: '#06b6d4', r: 4 }}
                     activeDot={{ r: 6 }}
@@ -210,7 +222,7 @@ INSIGHTS:
                     <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                     <XAxis dataKey="category" stroke="#64748b" />
                     <YAxis stroke="#64748b" />
-                    <Tooltip 
+                    <Tooltip
                       contentStyle={{ backgroundColor: '#fff', border: '1px solid #e2e8f0' }}
                       formatter={(value) => `$${value.toLocaleString()}`}
                     />
@@ -251,7 +263,7 @@ INSIGHTS:
                   <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                   <XAxis type="number" stroke="#64748b" />
                   <YAxis dataKey="state" type="category" stroke="#64748b" width={100} />
-                  <Tooltip 
+                  <Tooltip
                     contentStyle={{ backgroundColor: '#fff', border: '1px solid #e2e8f0' }}
                     formatter={(value) => `$${value.toLocaleString()}`}
                   />
