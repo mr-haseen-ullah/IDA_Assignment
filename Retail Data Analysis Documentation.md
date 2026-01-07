@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This document provides comprehensive documentation for the `IDA_Assignment` GitHub repository, which contains a Python-based solution for analyzing an Online Retail Dataset. The analysis covers data cleaning, various performance analyses, visualization techniques, and statistical tests, aligning with the requirements outlined in the provided `123.docx` file.
+This document provides comprehensive documentation for the `IDA_Assignment` GitHub repository, which contains a Python-based solution for analyzing an Online Retail Dataset. The analysis covers data cleaning, various performance analyses, visualization techniques, and statistical tests, aligning with the requirements outlined in the provided `Quiz # 04 (SE-417 IDA).docx` file.
 
 The repository includes the following key files:
 - `Complete_Retail_Analysis.py`: The main Python script performing all data analysis tasks.
@@ -33,7 +33,7 @@ python Complete_Retail_Analysis.py
 
 The script will output the analysis results to the console and save various visualization plots as PNG files in the same directory.
 
-## 3. Detailed Analysis (Based on `123.docx` Questions)
+## 3. Detailed Analysis (Based on `Quiz # 04 (SE-417 IDA).docx` Questions)
 
 ### Q1: Data Cleaning and Preprocessing
 
@@ -131,4 +131,4 @@ Based on the comprehensive analysis and statistical tests, the script provides s
 6.  **Customer Retention**: Implement win-back campaigns for churned customers, create loyalty programs, and focus personalized offers on high-CLV customers.
 7.  **Forecasting & Inventory**: Utilize time series models for demand forecasting, prepare for seasonal variations, and optimize stock levels based on predicted demand.
 
-This documentation provides a thorough overview of the `IDA_Assignment` repository's solution, detailing its analytical approach and the insights derived, all in line with the requirements of the `123.docx` document.
+This documentation provides a thorough overview of the `IDA_Assignment` repository's solution, detailing its analytical approach and the insights derived, all in line with the requirements of the `Quiz # 04 (SE-417 IDA).docx` document.
