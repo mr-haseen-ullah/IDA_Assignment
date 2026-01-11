@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 
 function Router() {
   return (
-    <WouterRouter base="/IDA_Quiz_22MDSWE238">
+    <WouterRouter>
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/404" component={NotFound} />
